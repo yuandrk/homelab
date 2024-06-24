@@ -15,7 +15,8 @@ resource "flux_bootstrap_git" "this" {
   path = "./clusters"
 }
 
-module "github_repository" {
+
+module "github_repository"  {
   source                   = "github.com/den-vasyliev/tf-github-repository"
   github_owner             = var.GITHUB_OWNER
   github_token             = var.GITHUB_TOKEN
@@ -35,7 +36,7 @@ terraform {
   required_providers {
     flux = {
       source = "fluxcd/flux"
-      version = "1.2.1"
+      version = "1.3.0"
     }
   }
 }

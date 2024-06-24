@@ -9,4 +9,3 @@ $ curl -s https://fluxcd.io/install.sh | sudo bash
 ```
 
 2. Deployed & created a repository using Terraform 
-
