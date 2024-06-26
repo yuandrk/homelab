@@ -59,3 +59,26 @@ Follow these steps to correct the kubeconfig file:
    ``` bash 
    export KUBECONFIG=~/.kube/config
    
+### Adding an Additional Node to K3s Cluster
+
+#### Step 1: Obtain the Token from the Master Node
+
+To add a new worker node to your cluster, first retrieve the token from your master node with the following command:
+
+```bash
+sudo cat /var/lib/rancher/k3s/server/node-token
+```
+
+#### Install K3s Agent on the Worker Node 
+
+Using the token obtained from the master node, run the following command on your worker node to install the K3s agent:
+`curl -sfL https://get.k3s.io | K3S_URL=https://myserver:6443 K3S_TOKEN=mynodetoken sh -`
+Replace https://myserver:6443 with the URL of your master node and mynodetoken with the actual token you obtained in the previous step.
+
+
+###  Setting Up Remote Access 
+To remotely access the master node, you must configure it to recognize your public IP or DNS: 
+`curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--tls-san <your-public-ip-or-dns>" sh -`
+
+Replace <your-public-ip-or-dns> with your actual public IP address or a DNS name that resolves to it. This adjustment in the installation command ensures that the TLS certificate generated for the Kubernetes API server includes this IP or DNS as a valid endpoint, enabling secure connections over the internet.
+
