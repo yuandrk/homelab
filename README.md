@@ -27,6 +27,12 @@ This repo contains all of the configuration and documentation of my home lab
 
 ## Source: 
 - [Flux monitoring stack](https://github.com/fluxcd/flux2-monitoring-example/blob/main/README.md)
+- [OpenWeb](https://github.com/open-webui/open-webui)
+- [Grafana](https://grafana.com/)
+- [Prometeus](https://prometheus.io/)
+
+
+### inspired by [Mischa van den Burg](https://www.youtube.com/@mischavandenburg)
 
 ## Log 
 
