@@ -2,6 +2,12 @@
 
 This repository contains all configurations and documentation for my home lab.
 
+## Web accessible 
+
+- [Grafana](grafana.yuandrk.net)
+- [Weave GitOps](https://weave.yuandrk.net/)
+  
+
 ## Tooling
 
 - [k3s](https://docs.k3s.io/) - Lightweight Kubernetes distribution.
@@ -12,6 +18,7 @@ This repository contains all configurations and documentation for my home lab.
 - **Monitoring Stack**: Deploy Prometheus and Grafana for monitoring services.
 - **Project Hosting**:
   - [Teledoist](https://github.com/yuandrk/teledoist) - A personal project.
+  - [Weawe]
   - [OpenWeb](https://openwebui.com/) - A project aimed at open web interfaces.
     - Ensure services are accessible via URLs using:
       - Ingress
@@ -25,6 +32,8 @@ This repository contains all configurations and documentation for my home lab.
 
 - [x] Install Flux.
 - [x] Configure Terraform.
+- [x] AWS Route53
+- [ ] Store secrets in AWS Secrets   
 - [ ] Implement SOPS for secret management.
 
 ## Using k3s
@@ -43,6 +52,11 @@ K3s provides a streamlined Kubernetes experience, which is ideal for personal la
 Inspired by [Mischa van den Burg](https://www.youtube.com/@mischavandenburg), whose resources have guided the setup and goals of this lab.
 
 ## Log
+
+
+### 2024-08-03
+
+- set up cert manager ß
 
 ### 2024-07-21
 

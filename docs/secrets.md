@@ -7,3 +7,4 @@ first step install sops
 
 second install age 
 
+[] AWS secrets !
